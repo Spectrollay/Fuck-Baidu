@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         Fuck Baidu
 // @namespace    http://tampermonkey.net/
-// @version      1.7.1
+// @version      1.7.2
 // @description   屏蔽搜索引擎中来自百度的搜索结果. 支持的搜索引擎: Google / Bing / Yahoo / Yandex / DuckDuckGo
 // @description:zh-CN   屏蔽搜索引擎中来自百度的搜索结果. 支持的搜索引擎: Google / Bing / Yahoo / Yandex / DuckDuckGo
 // @description:en-US   Block search results from Baidu in search engines. Supported search engines: Google / Bing / Yahoo / Yandex / DuckDuckGo
 // @author       Hijack_Nick & Spectrollay
-// @match        *://*.google.com.*/*
+// @match        *://*.google.com/*
+// @match        *://*.google.com.hk/*
 // @match        *://*.bing.com/*
 // @match        *://*.yahoo.com/*
 // @match        *://*.yandex.com/*
