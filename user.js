@@ -3,9 +3,7 @@
 // @name         Fuck Baidu
 // @namespace    http://tampermonkey.net/
 // @version      1.6
-/* @description  屏蔽搜索引擎中来自百度的搜索结果\n
-Filter out all search results from "baidu.com" for some search engines.
-*/
+// @description  屏蔽搜索引擎中来自百度的搜索结果\nFilter out all search results from "baidu.com" for some search engines.
 // @author       Hijack_Nick & Spectrollay
 // @match        *://*.google.com/*
 // @match        *://*.bing.com/*
