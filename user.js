@@ -1,22 +1,24 @@
-//Fuck Baidu
 // ==UserScript==
 // @name         Fuck Baidu
 // @namespace    http://tampermonkey.net/
-// @version      1.6.2
-// @description:zh-CN   屏蔽搜索引擎中来自百度的搜索结果
-// @description:en-US   Filter out all search results from "baidu.com" for some search engines.
+// @version      1.7.1
+// @description   屏蔽搜索引擎中来自百度的搜索结果. 支持的搜索引擎: Google / Bing / Yahoo / Yandex / DuckDuckGo
+// @description:zh-CN   屏蔽搜索引擎中来自百度的搜索结果. 支持的搜索引擎: Google / Bing / Yahoo / Yandex / DuckDuckGo
+// @description:en-US   Block search results from Baidu in search engines. Supported search engines: Google / Bing / Yahoo / Yandex / DuckDuckGo
 // @author       Hijack_Nick & Spectrollay
 // @match        *://*.google.com/*
 // @match        *://*.bing.com/*
 // @match        *://*.yahoo.com/*
+// @match        *://*.yandex.com/*
+// @match        *://*.duckduckgo.com/*
 // @grant        none
 // @license      MIT
 // ==/UserScript==
- 
+
 (function() {
     'use strict';
 
-    const filterKeywords = ['baidu', '百度'];
+    const filterKeywords = ['baidu.'];
 
     function filterResults() {
         let results = [];
@@ -27,6 +29,10 @@
             results = document.querySelectorAll('.b_algo');
         } else if (location.hostname.includes('yahoo.com')) {
             results = document.querySelectorAll('.dd.algo');
+        } else if (location.hostname.includes('yandex.com')) {
+            results = document.querySelectorAll('.k_5ay1tJkv0OU_card');
+        } else if (location.hostname.includes('duckduckgo.com')) {
+            results = document.querySelectorAll('li[data-layout="organic"]');
         }
 
         results.forEach(result => {
@@ -42,10 +48,10 @@
 
     filterResults();
 
-    const searchInput = document.querySelector('input[name="q"], input[name="p"], #sb_form_q');
+    const searchInput = document.querySelector('input[name="q"], input[name="p"], input[name="text"], #sb_form_q');
     if (searchInput) {
         searchInput.addEventListener('input', () => {
-            const results = document.querySelectorAll('.g, .b_algo, .dd.algo');
+            const results = document.querySelectorAll('.g, .b_algo, .dd.algo, .serp-item, .result');
             results.forEach(result => {
                 result.style.display = '';
             });
