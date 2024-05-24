@@ -3,7 +3,7 @@
 // @name:zh-CN              去你妈的百度
 // @name:en-US              Fuck Baidu
 // @namespace               http://tampermonkey.net/
-// @version                 1.7.3
+// @version                 1.7.4
 // @description             屏蔽搜索引擎中所有来自百度的搜索结果. 支持的搜索引擎: Google / Bing / Yahoo / Yandex / DuckDuckGo
 // @description:zh-CN       屏蔽搜索引擎中所有来自百度的搜索结果. 支持的搜索引擎: Google / Bing / Yahoo / Yandex / DuckDuckGo
 // @description:en-US       Block search results from Baidu in search engines. Supported search engines: Google / Bing / Yahoo / Yandex / DuckDuckGo
@@ -22,7 +22,7 @@
 (function () {
     'use strict';
 
-    const filterKeywords = ['baidu.'];
+    const filterKeywords = ['baidu.', '220.181.38.149'];
 
     function filterResults() {
         let results = [];
