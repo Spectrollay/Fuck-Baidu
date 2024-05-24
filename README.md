@@ -30,3 +30,7 @@
 #### 下载
 
 [Greasy Fork](https://greasyfork.org/zh-CN/scripts/495931-baidu/)
+
+#### 开源
+
+[GitHub](https://github.com/Spectrollay/Fuck-Baidu)
