@@ -1,9 +1,10 @@
-//fuck Baidu
+//Fuck Baidu
 // ==UserScript==
 // @name         Fuck Baidu
 // @namespace    http://tampermonkey.net/
-// @version      1.6
-// @description  屏蔽搜索引擎中来自百度的搜索结果 Filter out all search results from "baidu.com" for some search engines.
+// @version      1.6.2
+// @description:zh-CN   屏蔽搜索引擎中来自百度的搜索结果
+// @description:en-US   Filter out all search results from "baidu.com" for some search engines.
 // @author       Hijack_Nick & Spectrollay
 // @match        *://*.google.com/*
 // @match        *://*.bing.com/*
